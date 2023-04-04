@@ -58,8 +58,7 @@ jobs:
 
       # CodeDeploy 에게 배포 명령을 내립니다.
     - name: Code Deploy
-      run: >
-        aws deploy create-deployment --application-name be-80-yhj0076
+      run: aws deploy create-deployment --application-name be-80-yhj0076
         --deployment-config-name CodeDeployDefault.AllAtOnce
         --deployment-group-name be-80-yhj0076-group
         --s3-location bucket=$S3_BUCKET_NAME,bundleType-zip,key=practice-deploy.zip
